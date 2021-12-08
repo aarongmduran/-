@@ -40,6 +40,11 @@ var contentEducación = [
   "En la Universidad de Oviedo",
 ];
 
+function goToSearch() {
+    window.location.href = "search.html";
+    console.log("a")
+}
+
 $(document).ready(function () {
   $("#searcher").keyup(function (e) {
     var valor = $(this).val();
