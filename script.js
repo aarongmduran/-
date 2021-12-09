@@ -53,28 +53,28 @@ $(document).ready(function () {
     contentIndex.forEach(function (el) {
       if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
         $("#results").append(
-          `<div class="find">${el} <a href="index.html"><i class="fa fa-link"></i></a></div>`
+          `<div class="find">${el} <a href="index.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
     contentAficiones.forEach(function (el) {
       if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
         $("#results").append(
-          `<div class="find">${el} <a href="aficiones.html"><i class="fa fa-link"></i></a></div>`
+          `<div class="find">${el} <a href="aficiones.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
     contentEducación.forEach(function (el) {
       if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
         $("#results").append(
-          `<div class="find">${el} <a href="educacion.html"><i class="fa fa-link"></i></a></div>`
+          `<div class="find">${el} <a href="educacion.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
     contentExperiencia.forEach(function (el) {
       if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
         $("#results").append(
-          `<div class="find">${el} <a href="experiencia.html"><i class="fa fa-link"></i></a></div>`
+          `<div class="find">${el} <a href="experiencia.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
