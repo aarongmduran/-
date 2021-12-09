@@ -45,34 +45,42 @@ function goToSearch() {
     console.log("a")
 }
 
+//Usando jQuery, se busca el input con el id searcher y activa lo de dentro de la función cada vez que se presiona el teclado. 
 $(document).ready(function () {
   $("#searcher").keyup(function (e) {
+    //Se toma el valor actual del input y se pone en minúsculas para evitar problemas. 
     var valor = $(this).val();
     var valor = valor.toLowerCase();
+    //Dentro del HTML que alojará los resultados se elimina el contenido.
     $("#results").empty();
+    /*
+      Por cada uno de los arrays con el texto que hay en la web se recorre cada uno de los textos
+      y se busca coincidencia con el texto incluído. 
+      En caso de que exista se introduce dentro del HTML de resultados el contenido. 
+    */
     contentIndex.forEach(function (el) {
-      if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
+      if (el.toLowerCase().includes(valor) & (valor.length > 0)) {
         $("#results").append(
           `<div class="find">${el} <a href="index.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
     contentAficiones.forEach(function (el) {
-      if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
+      if (el.toLowerCase().includes(valor) & (valor.length > 0)) {
         $("#results").append(
           `<div class="find">${el} <a href="aficiones.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
     contentEducación.forEach(function (el) {
-      if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
+      if (el.toLowerCase().includes(valor) & (valor.length > 0)) {
         $("#results").append(
           `<div class="find">${el} <a href="educacion.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
       }
     });
     contentExperiencia.forEach(function (el) {
-      if (el.toLowerCase().includes(valor) & (valor.length > 1)) {
+      if (el.toLowerCase().includes(valor) & (valor.length > 0)) {
         $("#results").append(
           `<div class="find">${el} <a href="experiencia.html"><img class="icon" src="./assets/icons/link.svg" alt="link icon" style="margin-left: 1rem;"></a></div>`
         );
